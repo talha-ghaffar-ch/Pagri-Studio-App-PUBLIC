@@ -8,189 +8,202 @@
       margin: 0;
       width: 1280px;
       height: 720px;
-      font-family: "Segoe UI", Arial, sans-serif;
-      background: radial-gradient(circle at 15% 15%, #ffd9cc 0%, #fff3ee 25%, #f5f7fb 55%, #eef2f8 100%);
-      color: #222;
       overflow: hidden;
-    }
-    .wrap {
-      width: 100%;
-      height: 100%;
-      padding: 42px 52px;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: radial-gradient(circle at 12% 15%, #ffe3d7 0%, #fff4ef 24%, #f1f5fb 55%, #e9eef7 100%);
+      color: #0f172a;
       position: relative;
+    }
+    .orb { position: absolute; border-radius: 50%; filter: blur(55px); opacity: .45; }
+    .orb.a { width: 290px; height: 290px; background: #ff7a45; right: -40px; top: -60px; }
+    .orb.b { width: 260px; height: 260px; background: #4f7cff; left: -70px; bottom: -95px; }
+
+    .layout {
+      position: relative;
+      z-index: 2;
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 28px;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 26px;
+      height: 100%;
+      padding: 40px 46px 34px;
     }
-    .glow {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(40px);
-      opacity: 0.45;
-      z-index: 0;
-    }
-    .g1 { width: 280px; height: 280px; background: #ff8b63; right: 30px; top: -40px; }
-    .g2 { width: 220px; height: 220px; background: #7c89ff; left: -60px; bottom: -70px; }
-    .panel {
-      z-index: 1;
-      background: rgba(255,255,255,0.72);
-      border: 1px solid rgba(255,255,255,0.8);
-      border-radius: 24px;
-      box-shadow: 0 12px 40px rgba(22, 27, 45, 0.12);
-      backdrop-filter: blur(4px);
-    }
+
     .left {
-      padding: 34px;
+      background: rgba(255,255,255,0.78);
+      border: 1px solid rgba(255,255,255,0.85);
+      border-radius: 26px;
+      box-shadow: 0 18px 42px rgba(15, 23, 42, 0.14);
+      padding: 28px 30px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
-    .badge {
+
+    .tag {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: #fff;
-      border: 1px solid #ffe0d5;
-      color: #d9480f;
-      font-weight: 700;
-      font-size: 14px;
-      padding: 8px 14px;
-      border-radius: 999px;
       width: fit-content;
+      padding: 8px 13px;
+      border-radius: 999px;
+      border: 1px solid #ffd9ca;
+      background: #fff;
+      color: #d04a1d;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .3px;
     }
-    h1 {
-      margin: 18px 0 8px;
-      font-size: 54px;
-      line-height: 1.03;
-      letter-spacing: -0.8px;
+
+    .title {
+      margin: 16px 0 8px;
+      font-weight: 900;
+      font-size: 58px;
+      line-height: .98;
+      letter-spacing: -1px;
       color: #111827;
     }
-    h1 span { color: #f25c27; }
+
+    .title span { color: #f25c27; }
+
     .subtitle {
       margin: 0;
-      color: #4b5563;
-      font-size: 21px;
+      font-size: 20px;
       line-height: 1.35;
+      color: #334155;
       max-width: 95%;
     }
-    .features {
-      margin-top: 22px;
+
+    .chips {
+      margin-top: 18px;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 10px;
     }
+
     .chip {
-      background: #fff;
+      padding: 10px 12px;
+      background: rgba(255,255,255,0.9);
       border: 1px solid #e5e7eb;
       border-radius: 12px;
-      padding: 10px 12px;
-      font-size: 15px;
-      font-weight: 600;
-      color: #374151;
-    }
-    .right {
-      padding: 22px;
-      display: grid;
-      grid-template-rows: 1fr 1fr;
-      gap: 14px;
-    }
-    .card {
-      border-radius: 18px;
-      border: 1px solid #e8ecf3;
-      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
-      padding: 16px;
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.6);
-    }
-    .card h3 {
-      margin: 0 0 10px;
-      font-size: 18px;
-      color: #1f2937;
-    }
-    .mini {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px;
-    }
-    .tile {
-      border-radius: 10px;
-      background: #f3f6fb;
-      border: 1px solid #e3e8f0;
-      padding: 8px;
-      font-size: 12px;
-      color: #445066;
+      font-size: 14px;
       font-weight: 700;
+      color: #334155;
       text-align: center;
     }
-    .bar {
-      margin-top: 9px;
-      height: 8px;
-      border-radius: 999px;
-      background: linear-gradient(90deg, #f25c27, #ff9b76 65%, #ffd2c2);
-    }
+
     .footer {
-      position: absolute;
-      bottom: 22px;
-      left: 52px;
-      right: 52px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      color: #6b7280;
-      font-size: 14px;
-      font-weight: 600;
-      z-index: 1;
+      margin-top: 16px;
+      color: #64748b;
+      font-size: 13px;
+      font-weight: 700;
     }
+
     .brand {
+      font-size: 18px;
+      font-weight: 900;
       color: #111827;
-      font-weight: 800;
     }
     .brand span { color: #f25c27; }
+
+    .right {
+      position: relative;
+      border-radius: 26px;
+      background: linear-gradient(165deg, #121b2f 0%, #1a233c 55%, #25294a 100%);
+      box-shadow: 0 20px 46px rgba(15, 23, 42, 0.25);
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .right::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 85% 10%, rgba(242,92,39,.25) 0%, rgba(242,92,39,0) 42%);
+      pointer-events: none;
+    }
+
+    .phone {
+      position: absolute;
+      width: 220px;
+      height: 460px;
+      border-radius: 30px;
+      border: 7px solid #0f172a;
+      overflow: hidden;
+      background: #0f172a;
+      box-shadow: 0 18px 34px rgba(0,0,0,0.45);
+    }
+
+    .phone img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .p1 { left: 18px; top: 142px; transform: rotate(-10deg); }
+    .p2 { left: 170px; top: 98px; z-index: 3; transform: rotate(-2deg); }
+    .p3 { left: 328px; top: 142px; transform: rotate(9deg); }
+
+    .label {
+      position: absolute;
+      top: 20px;
+      left: 22px;
+      right: 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #e5e7eb;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: .4px;
+      text-transform: uppercase;
+    }
+
+    .pill {
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.11);
+      border: 1px solid rgba(255,255,255,0.16);
+      color: #ffb89f;
+      font-size: 11px;
+      font-weight: 800;
+    }
   </style>
 </head>
 <body>
-  <div class="glow g1"></div>
-  <div class="glow g2"></div>
-  <div class="wrap">
-    <div class="panel left">
+  <div class="orb a"></div>
+  <div class="orb b"></div>
+  <div class="layout">
+    <section class="left">
       <div>
-        <div class="badge">PUBLIC PROJECT SHOWCASE</div>
-        <h1>Pagri Studio App <span>PUBLIC</span></h1>
-        <p class="subtitle">Cross-platform digital agency app built for service discovery, lead capture, and AI-powered business guidance.</p>
-        <div class="features">
-          <div class="chip">React + Vite Frontend</div>
-          <div class="chip">Capacitor Android Build</div>
-          <div class="chip">Gemini AI Assistant</div>
-          <div class="chip">PWA + Offline Cache</div>
+        <div class="tag">APP DESIGN SHOWCASE</div>
+        <h1 class="title">Pagri Studio<br><span>App Public</span></h1>
+        <p class="subtitle">A mobile-first digital experience for Pagri Studio featuring service discovery, lead capture, and AI-driven client guidance.</p>
+        <div class="chips">
+          <div class="chip">Modern UI System</div>
+          <div class="chip">AI Chat Integration</div>
+          <div class="chip">Cross-Platform Build</div>
+          <div class="chip">PWA + Android Ready</div>
         </div>
       </div>
-      <div class="bar"></div>
-    </div>
+      <div class="footer">
+        <div class="brand">Pagri <span>Studio</span></div>
+        <div>React | Vite | Capacitor</div>
+      </div>
+    </section>
 
-    <div class="panel right">
-      <div class="card">
-        <h3>Core Product Areas</h3>
-        <div class="mini">
-          <div class="tile">Home</div>
-          <div class="tile">Services</div>
-          <div class="tile">Pagri AI</div>
-          <div class="tile">Request Flow</div>
-        </div>
+    <section class="right">
+      <div class="label">
+        <span>Real App Screens</span>
+        <span class="pill">HOME | AI | REQUEST</span>
       </div>
-      <div class="card">
-        <h3>Purpose</h3>
-        <div class="mini">
-          <div class="tile">Brand Presence</div>
-          <div class="tile">Client Conversion</div>
-          <div class="tile">Trust + Compliance</div>
-          <div class="tile">Cross-Platform Delivery</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer">
-      <div class="brand">Pagri <span>Studio</span></div>
-      <div>Project Thumbnail • 1280 x 720</div>
-    </div>
+      <div class="phone p1"><img src="file:///C:/Users/talha/Desktop/Talha/Pagri-Studio-Project/featured-images/01-home.png" /></div>
+      <div class="phone p2"><img src="file:///C:/Users/talha/Desktop/Talha/Pagri-Studio-Project/03-pagri-ai.png" onerror="this.src='file:///C:/Users/talha/Desktop/Talha/Pagri-Studio-Project/featured-images/03-pagri-ai.png'" /></div>
+      <div class="phone p3"><img src="file:///C:/Users/talha/Desktop/Talha/Pagri-Studio-Project/featured-images/05-request.png" /></div>
+    </section>
   </div>
 </body>
 </html>
